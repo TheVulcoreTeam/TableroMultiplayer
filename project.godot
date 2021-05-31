@@ -11,8 +11,12 @@ config_version=4
 [application]
 
 config/name="TableroMultiplayer"
-run/main_scene="res://Main.tscn"
+run/main_scene="res://Scenes/Network_setup.tscn"
 config/icon="res://icon.png"
+
+[autoload]
+
+Network="*res://Autoloads/Network.gd"
 
 [display]
 
