@@ -8,21 +8,37 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "Node2D",
+"class": "GBoard",
+"language": "GDScript",
+"path": "res://BoardEngine/GBoard/GBoard.gd"
+}, {
+"base": "Node2D",
+"class": "GPiece",
+"language": "GDScript",
+"path": "res://BoardEngine/GPiece/GPiece.gd"
+} ]
+_global_script_class_icons={
+"GBoard": "",
+"GPiece": ""
+}
+
 [application]
 
 config/name="TableroMultiplayer"
-run/main_scene="res://Scenes/Network_setup.tscn"
+run/main_scene="res://Specialization/Network/NetworkSetup.tscn"
 config/icon="res://icon.png"
 
 [autoload]
 
-Network="*res://Autoloads/Network.gd"
+Network="*res://BoardEngine/Autoloads/Network.gd"
 
 [display]
 
-window/size/width=160
+window/size/width=320
 window/size/height=160
-window/size/test_width=640
+window/size/test_width=1280
 window/size/test_height=640
 window/stretch/mode="2d"
 window/stretch/aspect="keep"
@@ -34,6 +50,7 @@ common/enable_pause_aware_picking=true
 [rendering]
 
 quality/driver/driver_name="GLES2"
+2d/snapping/use_gpu_pixel_snap=true
 vram_compression/import_etc=true
 vram_compression/import_etc2=false
 environment/default_environment="res://default_env.tres"

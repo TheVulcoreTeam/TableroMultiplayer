@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Enemy-2.png-757f4f35af831a0fba56da901abdbe1a.stex"
+path="res://.import/Enemy-0.png-3afdf949e7e0b523240bc21d6978b86e.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Enemy-2.png"
-dest_files=[ "res://.import/Enemy-2.png-757f4f35af831a0fba56da901abdbe1a.stex" ]
+source_file="res://Data/TableroMultiplayer/PieceSkins/Enemies/Enemy-0.png"
+dest_files=[ "res://.import/Enemy-0.png-3afdf949e7e0b523240bc21d6978b86e.stex" ]
 
 [params]
 

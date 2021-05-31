@@ -16,6 +16,8 @@ func _ready() -> void:
 	else:
 		ip_address = IP.get_local_addresses()[3]
 	
+	print_debug(IP.get_local_addresses())
+	
 	for ip in IP.get_local_addresses():
 		if ip.begins_with("192.168."):
 			ip_address = ip
@@ -26,12 +28,12 @@ func _ready() -> void:
 func create_server() -> void:
 	server = NetworkedMultiplayerENet.new()
 	server.create_server(DEFAULT_PORT,MAX_CLIENTS)
-	get_tree().set_network_peer(server)
+	get_tree().network_peer = server
 
 func join_server() -> void:
 	client = NetworkedMultiplayerENet.new()
 	client.create_client(ip_address,DEFAULT_PORT)
-	get_tree().set_network_peer(client)
+	get_tree().network_peer = client
 
 func _connected_to_server() -> void:
 	print("Se ha conectado al Server exitosamente.")

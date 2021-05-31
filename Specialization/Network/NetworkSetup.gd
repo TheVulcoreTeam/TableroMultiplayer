@@ -1,7 +1,7 @@
 extends Control
 
 onready var multiplayer_config_ui = $Multiplayer_configure
-onready var server_ip_address = $Multiplayer_configure/server_ip_address
+onready var server_ip_address = $Multiplayer_configure/VBoxLabels/ServerIPAdress
 onready var device_ip_address = $CanvasLayer/device_ip_address
 
 func _ready() -> void:
@@ -12,10 +12,10 @@ func _ready() -> void:
 	device_ip_address.text = Network.ip_address
 
 func _player_connected(id) -> void:
-	print("Player " + str(id) + " has connected")
+	print_debug("Player " + str(id) + " has connected")
 
 func _player_disconnected(id) -> void:
-	print("Player " + str(id) + " has disconnected")
+	print_debug("Player " + str(id) + " has disconnected")
 
 func _on_create_server_pressed():
 	multiplayer_config_ui.hide()
