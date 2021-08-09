@@ -9,25 +9,49 @@
 config_version=4
 
 _global_script_classes=[ {
+"base": "GBoard",
+"class": "Board",
+"language": "GDScript",
+"path": "res://Game/Board/Board.gd"
+}, {
 "base": "Node2D",
 "class": "GBoard",
 "language": "GDScript",
 "path": "res://BoardEngine/GBoard/GBoard.gd"
 }, {
+"base": "GMovement",
+"class": "GBoxMovement",
+"language": "GDScript",
+"path": "res://BoardEngine/GMovement/GBoxMovement/GBoxMovement.gd"
+}, {
+"base": "Node",
+"class": "GMovement",
+"language": "GDScript",
+"path": "res://BoardEngine/GMovement/GMovement.gd"
+}, {
 "base": "Node2D",
 "class": "GPiece",
 "language": "GDScript",
 "path": "res://BoardEngine/GPiece/GPiece.gd"
+}, {
+"base": "GPiece",
+"class": "GPlayer",
+"language": "GDScript",
+"path": "res://BoardEngine/GPiece/GPlayer/GPlayer.gd"
 } ]
 _global_script_class_icons={
+"Board": "",
 "GBoard": "",
-"GPiece": ""
+"GBoxMovement": "",
+"GMovement": "",
+"GPiece": "",
+"GPlayer": ""
 }
 
 [application]
 
 config/name="TableroMultiplayer"
-run/main_scene="res://Specialization/Network/NetworkSetup.tscn"
+run/main_scene="res://Game/Board/Board.tscn"
 config/icon="res://icon.png"
 
 [autoload]
