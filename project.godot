@@ -51,7 +51,7 @@ _global_script_class_icons={
 [application]
 
 config/name="TableroMultiplayer"
-run/main_scene="res://Game/Board/Board.tscn"
+run/main_scene="res://BoardEngine/Network/NetworkSetup.tscn"
 config/icon="res://icon.png"
 
 [autoload]
